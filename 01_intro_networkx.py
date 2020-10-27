@@ -53,8 +53,6 @@ print(edge_list)
 node_list=G.nodes()
 print(node_list)
 
-#print an adjacency list
-print(G.adjacency())
 
 #calculate shortest path with Dijkstra algorithm
 print("path length from Bern to Rome is "+str(nx.dijkstra_path_length(G,"Bern","Rome"))+" km")
@@ -72,6 +70,5 @@ print(nx.betweenness_centrality(G))
 #graph density
 print("graph density: ", nx.density(G))
 
-#show the neighbors of a node
-print("the neighbors of Bern are ", G.neighbors("Bern"))
+
 
