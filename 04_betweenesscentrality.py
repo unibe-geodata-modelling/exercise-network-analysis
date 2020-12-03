@@ -48,6 +48,7 @@ nx.write_gml(G, outgraphfile)
 #parameter k is the number of the sample to safe time, k=1000 --> ca. 1% of the total network is taken as a sample
 #if k=None, the full network will be considered. This needs some hours of computation
 betweennesscentrality=nx.betweenness_centrality(G, k=1000, normalized=True, endpoints=True)
+betweennesscentrality=nx.betweenness_centrality(G, k=None, normalized=True, endpoints=True)
 for n in betweennesscentrality:
     nodesbetweennesscentralityfile.write(str(n)+";"+str(betweennesscentrality[n])+"\n")
 nodesbetweennesscentralityfile.close()
