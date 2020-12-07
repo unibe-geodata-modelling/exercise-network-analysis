@@ -1,4 +1,4 @@
-#script for analysing shortes paths from all nodes in road network of Canton Zurich to Zurich main central station
+#script for analysing betweenness centrality in the road network of the Canton of ZH
 import numpy as np
 import pandas as pd
 import networkx as nx
