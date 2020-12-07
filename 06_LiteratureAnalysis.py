@@ -40,3 +40,10 @@ for paper in paperslist:
 #create a graph
 plt.figure(figsize=(15, 15))
 nx.draw_shell(G, with_labels=True,)
+
+#analysis of the number of connections
+coauthorships = {}
+for x in G.nodes:
+    coauthorships[x] = len(G[x])
+
+print(coauthorships)
