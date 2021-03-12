@@ -7,7 +7,7 @@ import networkx as nx
 #configure twint setting, access to twitter data
 c = twint.Config()
 c.Pandas = True
-username = 'AndreasZischg' #this must be the twitter username of the person from whom you will analyse the twitter accounts that he/she is following. Change it accordingly
+username = 'JanosAmmann' #this must be the twitter username of the person from whom you will analyse the twitter accounts that he/she is following. Change it accordingly
 number_of_levels=2 #how many levels of depth in the analysis are considered. Attention: delimit it to up to max 2 levels if you show the code in live exercises
 c.Username = username
 
@@ -61,17 +61,17 @@ nx.write_gexf(G, path="C:/DATA/twitterdata.gexf")
 #plot the graph
 plt.figure(figsize=(15, 15))
 nx.draw(G, with_labels=True)
-plt.savefig("C:/DATA/twitteranalysis_standardlayout.png")
+plt.savefig("C:/Users/evama/OneDrive/Documents/Python/Twitter/twitteranalysis_standardlayout.png")
 plt.close()
 #alternative plot
 plt.figure(figsize=(15, 15))
 nx.draw_kamada_kawai(G, with_labels=True)
-plt.savefig("C:/DATA/twitteranalysis_kamada_kawai_layout.png")
+plt.savefig("C:/Users/evama/OneDrive/Documents/Python/Twitter/twitteranalysis_kamada_kawai_layout.png")
 plt.close()
 #alternative plot
 plt.figure(figsize=(15, 15))
 nx.draw_spectral(G, with_labels=True)
-plt.savefig("C:/DATA/twitteranalysis_spectrallayout.png")
+plt.savefig("C:/Users/evama/OneDrive/Documents/Python/Twitter/twitteranalysis_spectrallayout.png")
 plt.close()
 
 
