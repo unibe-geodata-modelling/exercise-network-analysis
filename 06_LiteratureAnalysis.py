@@ -37,6 +37,10 @@ for paper in paperslist:
                 if coauthor in paper:
                     G.add_edge(prof,coauthor)
 
+#analysis of the number of connections
+coauthorships = {}
+for x in G.nodes:
+    coauthorships[x] = len(G[x])
 #print the number of coauthorships
 print(coauthorships)
 
@@ -44,13 +48,6 @@ print(coauthorships)
 plt.figure(figsize=(15, 15))
 nx.draw_shell(G, with_labels=True,)
 
-
-
-
-#analysis of the number of connections
-coauthorships = {}
-for x in G.nodes:
-    coauthorships[x] = len(G[x])
 
 #calculate centrality
 print(nx.degree_centrality(G))
